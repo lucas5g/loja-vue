@@ -35,7 +35,7 @@ header h1 {
 
 @media screen and (min-width: 700px) {
   header h1{
-    width: 50%;
+    width: 60%;
   }
 }
 </style>

@@ -17,30 +17,12 @@
               <th>Criado em</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody v-for="customer in customers" :key="customer.id">
             <tr>
-              <td>Exemplo de nome</td>
-              <td>sample@gmail.com</td>
-              <td>431.739</td>
-              <td>Exemplo de nome</td>
-            </tr>
-            <tr>
-              <td>Exemplo de nome</td>
-              <td>sample@gmail.com</td>
-              <td>431.739</td>
-              <td>Exemplo de nome</td>
-            </tr>
-            <tr>
-              <td>Exemplo de nome</td>
-              <td>sample@gmail.com</td>
-              <td>431.739</td>
-              <td>Exemplo de nome</td>
-            </tr>
-            <tr>
-              <td>Exemplo de nome</td>
-              <td>sample@gmail.com</td>
-              <td>431.739</td>
-              <td>Exemplo de nome</td>
+              <td>{{customer.name}}</td>
+              <td>{{customer.email}}</td>
+              <td>{{customer.cpf}}</td>
+              <td>{{customer.created_at}}</td>
             </tr>
           </tbody>
         </table>
@@ -51,10 +33,24 @@
 
 <script>
 import Header from "../components/Header";
+import api from "../services/api";
+// import { response } from 'express';
+
 export default {
   name: "UserList",
   components: {
     Header,
+  },
+  data() {
+    return {
+      customers: [],
+    };
+  },
+  mounted() {
+    (async () => {
+      const { data } = await api.get("customers");
+      this.customers = data;
+    })();
   },
 };
 </script>
@@ -79,7 +75,7 @@ main {
   /* border: 1px solid black; */
 }
 
-main div{
+main div {
   width: 95%;
   /* background: red; */
 }
@@ -97,7 +93,6 @@ main .input-block {
   margin-bottom: 20px;
   width: 100%;
 }
-
 
 main div .input-block label {
   color: var(--label-color);
@@ -129,11 +124,12 @@ td {
   padding: 12px;
   overflow: hidden;
   word-wrap: break-word;
-} 
+  /* font-size: 14px; */
+}
 
 @media screen and (min-width: 700px) {
-  main div{
-    width: 50%;
+  main div {
+    width: 60%;
   }
 }
 </style>
