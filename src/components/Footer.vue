@@ -10,5 +10,21 @@ export default {
 };
 </script>
 
-<style>
+<style >
+footer {
+  background: var(--blue);
+  height: 130px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+footer p {
+  color: var(--section-title-background);
+  font-weight: bold;
+  font-size: 1.3rem;
+  width: 90%;
+}
 </style>

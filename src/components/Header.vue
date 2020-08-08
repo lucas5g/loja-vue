@@ -1,23 +1,35 @@
 <template>
-  <header>
-    <header>
-      <ul>
-        <li>
-          <router-link to="/listar"> Lista</router-link>
-        </li>
-        <li>
-          <router-link to="/cadastrar"> Cadastrar</router-link>
-        </li>
-      </ul>
+   <header>
+      <h1>{{ text }}</h1>
     </header>
-  </header>
 </template>
 
 <script>
 export default {
-  name: "Header"
-};
+  name:"Header",
+  props:{
+    text: String
+  }
+}
 </script>
 
 <style>
+header {
+  background: #eff4f9;
+  height: 120px ;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 60px;
+  width: 95%;
+  color: #445566;
+  font-weight: 100;
+
+}
 </style>
