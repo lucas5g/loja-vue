@@ -5,7 +5,7 @@
         <router-link to="/listar">Lista</router-link>
       </li>
       <li>
-        <router-link to="/cadastrar">Cadastrar</router-link>
+        <router-link to="/cadastrar"> Cadastrar</router-link>
       </li>
     </ul>
   </nav>
@@ -32,11 +32,11 @@ nav ul {
   display: flex;
   list-style: none;
   font-size: 1.2rem;
-  font-weight: bold;
+
 }
 
 nav li {
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 nav li a {

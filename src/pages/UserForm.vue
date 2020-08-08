@@ -128,14 +128,14 @@ main form fieldset {
 }
 
 main form fieldset:nth-child(2) {
-  border-bottom: 3px solid var(--input-box-shadow);
+  border-bottom: 3px solid rgba(187, 204, 221, .4);
 }
 
 main form fieldset legend {
   font-size: 20px;
   color: var(--blue);
   font-weight: bold;
-  border-bottom: 3px solid var(--input-box-shadow);
+  border-bottom: 3px solid rgba(187, 204, 221, .4);
   width: 100%;
   margin-bottom: 20px;
 }
@@ -147,19 +147,19 @@ main form fieldset .input-block {
 }
 
 main form fieldset .input-block label {
-  color: var(--label-color);
+  color: #445566;
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 5px;
 }
 
 main form fieldset .input-block input {
-  background: var(--input-background);
+  background: #eff4f9;
   padding: 20px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 2px 2px var(--input-box-shadow);
-  color: var(--label-color);
+  box-shadow: 0px 2px 2px rgba(187, 204, 221, .4);
+  color: #445566;
   font-size: 20px;
   width: 100%;
 }
@@ -204,13 +204,13 @@ main form  .footer{
 }
 
 main form .footer p{
-  color: var(--label-color);
+  color: #445566;
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 15px;
 }
 main form .footer button{
-  color: var(--label-color);
+  color: #445566;
   font-weight: bold;
   margin-bottom: 10px;
 
@@ -218,7 +218,7 @@ main form .footer button{
   padding: 25px;
   text-transform: uppercase;
   background: var(--blue);
-  border: var(--label-color);
+  border: #445566;
   border-radius: 5px;
   color: #fff;
 
@@ -228,5 +228,21 @@ main form .footer sub{
   font-size: 12px;
 }
 
+@media screen and (min-width: 700px) {
+  main form{
+    width: 50%;
+  }
+
+  main form fieldset .input-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  main form .footer button{
+    width: 220px;
+    padding: 15px;
+  } 
+}
 
 </style>

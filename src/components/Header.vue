@@ -32,4 +32,10 @@ header h1 {
   font-weight: 100;
 
 }
+
+@media screen and (min-width: 700px) {
+  header h1{
+    width: 50%;
+  }
+}
 </style>
