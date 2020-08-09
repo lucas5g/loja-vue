@@ -1,24 +1,10 @@
 # loja-vue
 
-## Project setup
-```
-yarn install
-```
+## Instalação 
 
-### Compiles and hot-reloads for development
-```
+yarn install 
 yarn serve
-```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+##Sobre
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Aplicação feita com vuejs, para cadastro de clientes.
