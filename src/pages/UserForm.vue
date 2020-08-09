@@ -8,6 +8,7 @@
             <label for="name">Nome</label>
             <input type="text" v-model="customer.name" required />
           </div>
+      
           <div class="input-block">
             <label for="email">Email</label>
             <input type="email" name="email" v-model="customer.email" required />
@@ -105,6 +106,7 @@
 import Header from "../components/Header";
 import moment from 'moment'
 import api from "../services/api";
+
 export default {
   name: "UserForm",
   components: {
@@ -113,7 +115,7 @@ export default {
   data() {
     return {
       customer: {
-        // name: "Lucas de sousa ",
+        //  name: "Lucas de sousa ",
         // email: "lucasdesousa19@hotmail.com",
         // cpf: "123.123.123-50",
         // address: "Rua x, 215 bairro B",
@@ -221,25 +223,11 @@ main form fieldset .input-radio label {
   /* background: red; */
 }
 main form fieldset .input-radio input[type="radio"] {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-main form fieldset .input-radio input[type="radio"]::after {
+
   margin-right: 10px;
-  color: var(--blue);
-  background-color: red;
-  content: "";
-  width: 20px;
-  height: 30px;
+
 }
+
 
 main form fieldset .input-radio input:checked {
   margin-right: 10px;
